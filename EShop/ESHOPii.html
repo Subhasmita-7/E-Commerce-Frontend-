@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <script src="https://code.jquery.com/jquery-3.7.1.js" 
+        integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous">
+        </script>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" 
+        rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" 
+        crossorigin="anonymous">
+        
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" 
+        integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous">
+        </script>
+        <script>
+            $(document).ready(function(){
+                $("#flip").click(function(){
+                    $("#panel").slideToggle(3000);
+                });
+                $("#myInput").on("keyup",function(){
+                    var value=$(this).val().toLowerCase();
+                    $("#myTable tr").filter(function(){
+                        $(this).toggle($(this).text().toLowerCase().indexOf(value)>-1)
+                    });
+                });
+                $("Button").click(function() {
+					 alert("Search button is clicked. "+
+                    $("#myInput").val() + " Category : " + $("#categorysel").children(":selected").html());
+				});
+            });
+        </script>
+        <style>
+            
+            body{
+                background-image: url(bg.jpg);
+            }
+            .off{
+                text-align: center;
+                color: brown;
+                
+            }
+            h3{
+                color: royalblue;
+            }
+            .first{
+                color: darkred;
+                text-align: center;
+                font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+                font-size: 400%;
+                font-style: oblique;
+                outline-color: goldenrod;
+                outline-style: double;
+            }
+            .firs{
+                color: orangered;
+                text-align: center;
+                font-family: 'Courier New', Courier, monospace;
+                font-style: oblique;
+                font-size: x-large;
+                text-decoration: underline;
+            }
+            .links{
+                text-align: center;
+            }
+            #nav {
+                background-color: rgb(126, 79, 126);
+                width: 50%;
+                list-style-type: none;
+                align-content: center;
+                margin: 0;
+                padding: 0;
+                overflow: hidden;
+            }
+            li {
+                float: left;
+            }   
+            li a {
+                display: block;
+                padding: 8px;
+                text-decoration: none;
+
+            }          
+            .nav1{
+                
+                list-style-type: none;
+                width: 100%;
+                text-align: center;
+                background-color: lightpink;
+                height: 45px;
+                font-size: x-large;
+            }
+            table a:link{
+                    color:black;
+                }
+            li a:hover {
+                background-color: palevioletred;
+                color: firebrick;
+            }
+            #flip{
+                padding:10px;
+                text-align: left;
+                background-color: lightgreen;
+                border: solid red;
+            }
+            #panel{
+                background-color: lightgoldenrodyellow;
+                padding:50px;
+                display: none;
+                border: solid yellow;
+            }
+            
+            table{
+                font-family: "Bradley Hand ITC";
+                border-collapse: collapse;
+                width:70%;
+                margin-left: 10%;
+            }
+            td,th{
+                border: 2px solid orange;
+                text-align: left;
+                padding:10px;
+                font-size: 18px;
+                text-decoration: none;
+            }
+            tr:nth-child(even){
+                background-color: rgb(220, 98, 220);
+            }
+            #myInput{
+                margin-left: 10%;
+                width: 350px;
+                height: 35px;
+            }
+
+        </style>
+        <title>E-Shop website</title>
+    </head>
+    <body>
+        <h3 style="font-size: x-large;"><b>^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^</b></h3>
+        <h1 class="first"><img src="logo3.jpg" alt="Eshop logo" width="100px" height="100px">Welcome to Kiki's Eshop <img src="logo3.jpg" alt="Eshop logo" width="100px" height="100px"></h1>
+        <p></p>
+        
+        <div class="row bg-dark" >
+            
+            <div class="col">
+                    <select id="categorysel">
+                    <option>All</option>
+                    <option>Potions</option>
+                    <option>Clothes</option>
+                    <option>Hats</option>
+                    <option>Capes</option>
+                    <option>Food</option>
+            </select><button>Search</button><br></div>
+            <div class="col"><a href="Home.html" target="_blank">Home     </a></div>
+            <div class="col"><a href="SpecialOffers.html" target="_blank">Special Offers</a></div>
+            <div class="col"><a href="Contact.html" target="_blank">Help     </a></div>
+            <div class="col"><a href="Login.html" target="_blank">Login     </a>
+               </div>
+            
+            <br>
+        </div>
+
+        <h3 class="firs">Get any item at a reasonable price.</h3>
+        <p class="im">--<img src="kiki.gif">-----------<img src="kikiiiii.gif"></p><br>
+        
+        
+        <div id="nav">
+            
+            <input id="myInput" type="text" placeholder="What do you want?">
+            <span ><i> [0] Items in your cart </i> </span>
+            
+        </div>
+<br><br>
+<br>
+<br>
+<p></p>
+<table>
+  <thead>
+  <tr>
+    <th style="font-family: ARIAL;">Wearable</th>
+    <th style="font-family: ARIAL;">Furniture</th>
+    <th style="font-family: ARIAL;">Bakery</th>
+  </tr>
+  </thead>
+  <tbody id="myTable">
+  <tr>
+    <td><a href="Home.html" style="text-decoration: none;">Clothes</a></td>
+    <td><a href="Home.html" style="text-decoration: none;">Potions</a></td>
+    <td><a href="Home.html" style="text-decoration: none;">Bread</a></td>
+  </tr>
+  <tr>
+    <td><a href="Home.html" style="text-decoration: none;">Capes</a></td>
+    <td><a href="Home.html" style="text-decoration: none;">Gift Items</a></td>
+    <td><a href="Home.html" style="text-decoration: none;">Butter</a></td>
+  </tr>
+  <tr>
+    <td><a href="#" style="text-decoration: none;">Hats</a></td>
+    <td><a href="#" style="text-decoration: none;">Table</a></td>
+    <td><a href="#" style="text-decoration: none;">Pies</a></td>
+  </tr>
+  <tr>
+    <td><a href="#" style="text-decoration: none;">Dresses</a></td>
+    <td><a href="#" style="text-decoration: none;">Chairs</a></td>
+    <td><a href="#" style="text-decoration: none;">Cakes</a></td>
+  </tr>
+  <tr>
+    <td><a href="#" style="text-decoration: none;">Shoes</a></td>
+    <td><a href="#" style="text-decoration: none;">Glasses</a></td>
+    <td><a href="#" style="text-decoration: none;">Cookies</a></td>
+  </tr>
+ <tr>
+    <td><a href="#" style="text-decoration: none;">Sweater</a></td>
+    <td><a href="#" style="text-decoration: none;">Wands</a></td>
+    <td><a href="#" style="text-decoration: none;">Biscuits</a></td>
+  </tr>
+  <tr>
+    <td><a href="#" style="text-decoration: none;">Shawls</a></td>
+   <td><a href="#" style="text-decoration: none;">Bells</a></td>
+   <td><a href="#" style="text-decoration: none;">Milk Cake</a></td>
+ </tr>
+  </tbody>
+</table>
+        
+
+        <h1 id="flip" style="color: red; font-size: xx-large; text-align: center; background-color: lemonchiffon;">OFFERSS AVAILABLEE!!!!</h1>
+        <p id="panel"><img src="SALEEE.png" href="SpecialOffers.html" target="_blank">
+            <img src="off.avif" width="500px" height="200px" href="SpecialOffers.html" target="_blank">
+            <img src="SALE.jpg" width="300px" height="200px" href="SpecialOffers.html" target="_blank"></p>
+        <hr><br><br>
+        
+            
+        <br><br>
+        <hr>
+        
+    </body>
+</html>

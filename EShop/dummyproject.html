@@ -1,0 +1,362 @@
+ <!DOCTYPE html>
+<html lang="en">
+<head><script src="https://code.jquery.com/jquery-3.7.1.js" integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
+    
+    <title>URBANIC</title>
+
+        <script> 
+ $(document).ready(function() {
+      $("#flip").hover(
+        function() {
+          $("#panel").toggle("fast");
+        });
+      
+    });
+</script>
+<script src="https://unpkg.com/@phosphor-icons/web"></script>
+    <style>
+#panel{
+ padding: 10px;
+ text-align: left;
+ background-color: rgb(218, 255, 30);
+ border: solid 5px rgb(128, 75, 0);
+
+ padding: 60px;
+ display: none;
+}
+        .navbar{
+            background-color:yellowgreen;
+          
+        }
+        a
+        {
+            background: rgb(241, 255, 192);
+            color:black;
+            padding:1em 1.5em;
+            text-decoration: none;
+            text-transform: uppercase;
+        }
+         .card{
+            margin-top: 20px;;
+            height: 350px;
+            width: 23%;
+            border:1px solid black;
+            align-items: center;
+            background-color: rgb(230, 240, 93);
+            padding: 10px;
+         }
+         .card-image{
+            height:283px;
+            background-size: cover;
+            background-repeat: no-repeat    ;
+            object-fit: cover;
+          width:305px;
+            background-size: cover;
+            justify-content: center;
+            display: flex;
+            
+         }
+           
+         .card-content{
+            font-size: medium;
+            text-align:center;
+            font-style:italic;
+            text-transform: capitalize;
+         }
+         .dp{
+            display: flex;
+            gap: 10px;
+         }
+        .upper{
+            background-image: url(https://play-lh.googleusercontent.com/kDRIH4JQAkdLR2S8zuS1jtTgxsgOxT8DqtxqoCo2LPxUmwmVIJ4jX1tnA3MVF0u_BBM);
+             
+           text-align: center;
+             background-size: cover;
+             object-fit: cover;
+             height:550px;
+             display:flex;
+             justify-content: center;
+        }
+        .inner{
+            
+            text-align: center;
+        }
+           
+       nav{
+             gap: 10px;
+            justify-content: space-between;
+            display: flex;
+            background: rgb(206, 190, 161);
+        }
+        .search{
+            margin-right: 15px;
+        align-items: center;
+            display: flex;
+            position: relative;
+
+        }
+        .navbar2{
+flex-direction: row;
+display: flex;
+justify-content: space-between;
+        }
+.ano{
+            margin-top: 20px;;
+            height:800px;
+            width: 100%;
+            border:1px solid black;
+            align-items: center;
+            
+            padding: 10px;
+         }
+         .ano-image{
+            
+            
+            height:100%;
+            background-size: cover;
+            background-repeat: no-repeat    ;
+            object-fit: cover;
+           width:100%;
+            background-size: cover;
+            justify-content: center;
+            display: flex;
+            
+         }
+           
+         .ano-content{
+            margin-top: 5px;
+            font-size:50px;
+            text-align:center;
+            font-style:arial;
+            text-transform: capitalize;
+         }
+         .dp2{
+            display:flex;
+            gap:20px;
+           
+         }
+        .another{
+           margin-top: 20px;;
+            height: 420px;
+            width: 18%;
+           
+                 align-items: center;
+           
+            padding: 10px;
+         }
+         .another-image{
+            
+            
+height:350px;
+            background-size: cover;
+            background-repeat: no-repeat    ;
+           object-fit: cover;
+           width:283px;
+            background-size: cover;
+            justify-content: center;
+            display: flex;
+            
+         }
+           
+         .another-content{
+            font-size: medium;
+            text-align:center;
+            font-style:italic;
+            text-transform: capitalize;
+         }
+.dp1{
+            display: flex;
+            gap:20px;
+           
+         }
+         .search-btn, .close-btn{
+            width: 40px;
+            height: 40px;
+            font-size: 25px;
+            
+            border:none;
+            cursor: pointer;
+            position: absolute;
+            bottom:20px;
+           
+
+         }
+         .close-btn{
+            color:rgb(224, 22, 22);
+            z-index: -1;
+         }
+         .search-box{
+            width: 40px;
+            height: 40px;
+            padding:15px ;
+            border-radius: 25px;
+           
+            
+            outline: none;
+            border: none;
+         }
+         .active .search-box{
+            width: 210px;
+            height: 5px;
+         }
+         .active .search-btn{
+            transform: translate(200px,15px) ;
+            background-color:transparent;
+            color: black;
+         }
+         .active .close-btn{
+            transform: translate(250px,15px);
+           z-index: 0;
+           
+         }
+         .icon{
+            size: 50px;
+         }
+         
+           
+    </style>
+</head>
+<body >
+    <h1 style=" color: black; text-align:center;font-style:italic; font-size:60px;background-color:yellow;">URBANIC</h1>
+    <div class="navbar">
+
+
+<div class="navbar2">
+    <img src="https://asset20.ckassets.com/blog/wp-content/uploads/sites/6/2022/09/Urbanic-logo.jpg" alt="myeshop logo" width="100px" height="50px">
+
+  <div id="flip"><p>NEW IN</p>
+   </div>
+
+  <div id="panel"> <p> recomanded </p></div>
+   <p>CLOTHING</p>
+   <p>DRESSES</p>
+   <p>KNITWEAR</p>
+   <p>DENIM</p>
+   <p>SPORTS</p>
+   <p>SWIMWEAR</p>
+   <p>ABOUT US</p></div></div>
+<nav>
+    <div class="search active">
+        <input type="text" placeholder="search here" class="search-box">
+        <button class="search-btn"><i class="ph-bold ph-magnifying-glass"></i></button>
+    <button class="close-btn"><i class="ph-bold ph-x"></i></button>
+    </div>
+   
+<a href="https://in.urbanic.com/">Home <span class="icon"> <i class="ph-fill ph-house-line"></i></span></a>
+<a href="https://in.urbanic.com/category/728">Special Offers</a>
+<a href="https://in.urbanic.com/category/dresses/view-all-545">dresses</a>
+<a href="https://in.linkedin.com/company/urbanic-global">linkdin</a>
+</nav>
+<div class="upper">
+    <div class="inner">
+        <p style="font-size: 50px;color: rgb(46, 46, 41);">Early Black FRIDAY</p>
+        <p style="font-size: 50px;color:rgb(46, 46, 41)">upto</p>
+     <p style="font-size: 100px;color: rgb(46, 46, 41); margin-top: 5px;">50% OFF</p>
+     <p style="border: 5px black; background-color: yellow;">USE CODE : BF20</p>
+</div>
+</div>
+<div class="dp">
+<div class="card">
+    <div class="card-content">
+        <h2>Style yourself</h2>
+    </div>
+    <div class="card-image" style="background-image: url(https://assets.vogue.in/photos/64ca2422ee82e0e973db9975/2:3/w_2560%2Cc_limit/CASUAL_11_1020-min.jpg);" >
+       
+    </div>
+</div>
+<div class="card">
+    <div class="card-content">
+        <h2>Too glam to give a damn.</h2>
+    </div>
+    <div class="card-image" style="background-image: url(https://etimg.etb2bimg.com/thumb/msid-85584382,imgsize-56834,width-1200,height=765,overlay-etbrandequity/business-of-brands/myntra-partners-with-urbanic.jpg);" >
+       
+    </div></div>
+    
+   <div class="card">
+    <div class="card-content">
+        <h2>If you like it, wear it.</h2>
+    </div>
+    <div class="card-image" style="background-image: url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTk-sSxzmphGSZAfQztsNkzTpL9ucjIrHwrSCEb2YeUWnNcRJjJW5PCTZ0H0VXtNRIydSg&usqp=CAU);" >
+       
+    
+</div>
+</div>
+<div class="card">
+    <div class="card-content">
+        <h2>Create your own style</h2>
+    </div>
+    <div class="card-image" style="background-image: url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTalQ7Y_aS7AB17U0hNvvs0EaC9XDxxIKoC7w&usqp=CAU);  margin-left: 10px;" >
+       
+    
+</div>
+</div></div>
+<br>
+<div class="dp1">
+<div class="another">
+    <div class="another-image" style="background-image:url(sale2.jpg);" >
+      </div>
+<div class="another-content">
+    <p>Ruffle Bodycon dresses</p>
+    <p>₹1900</p>
+   </div>
+
+</div>
+<div class="another">
+    <div class="another-image" style="background-image:url(salee.jpeg);" >
+      </div>
+<div class="another-content">
+    <p>short brown sweater</p>
+    <p>₹1100</p>
+   </div>
+
+</div>
+<div class="another">
+    <div class="another-image" style="background-image:url(SALE.jpg);" >
+      </div>
+<div class="another-content">
+    <p>White gathered Bodycon dresses</p>
+    <p>₹1650</p>
+   </div>
+
+</div>
+<div class="another">
+    <div class="another-image" style="background-image:url(SALEEE.png);" >
+      </div>
+<div class="another-content">
+    <p>Straight leg jeans</p>
+    <p>₹2000</p>
+   </div>
+
+</div>
+<div class="another">
+    <div class="another-image" style="background-image:url(bg3.jpg);" >
+      </div>
+<div class="another-content">
+    <p>Bag-Wheretoget</p>
+    <p>₹1800</p>
+   </div>
+
+</div>
+</div>
+<div class="dp2">
+    <div class="ano">
+        <div class="ano-image" style="background-image:url(bg2.webp);" >
+          </div>
+    <div class="ano-content">
+        <p style="background-color: rgb(222, 29, 29);">KNITWEAR ></p>
+        
+       </div>
+    
+    </div>
+    <div class="ano">
+        <div class="ano-image" style="background-image:url(bg.jpg);" ></div>
+    <div class="ano-content">
+        <p style="background-color: rgb(224, 22, 22);">DRESSES ></p>
+        
+       </div>
+    </div>
+
+</div>
+
+</body>
+</html>

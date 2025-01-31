@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <style>
+            body{
+                background-image: url(bg3.jpg);
+            }
+            h1{
+                font-style: oblique;
+                font-family: Verdana, Geneva, Tahoma, sans-serif;
+                text-align: center;
+                color: navy;
+            }
+            .a{
+                color: palevioletred;
+                text-align: justify;
+                font-style: italic;
+                font-size: xx-large;
+
+            }
+            .b{
+                color: palevioletred;
+                text-align: justify;
+                font-style: italic;
+                font-size: xx-large;
+
+            }
+            #pics{
+                width:100px;
+                height:100px;
+            }
+            #picOne, #picTwo , #picThree{
+                position:absolute;
+                display: none;
+            }
+           
+        </style>
+         <script src="https://code.jquery.com/jquery-3.7.1.js" 
+         integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous">
+         </script>
+        <script>
+            $(document).ready(function() {
+                $("#picOne").fadeIn(3000).delay(3500).fadeOut(1500);
+                $("#picTwo").delay(5000).fadeIn(8000).fadeOut(8000);
+                $("#picThree").delay(5000).fadeIn(5000);
+            });
+        </script>
+        </script>
+        <title>Offer Page</title>
+    </head>
+    <body style="background-color: lightgrey;">
+        <h1><u>SPECIALL OFFERSS</u></h1>
+        <p class="a">
+        Get 50% discount on bakery items!! <a href="Home.html">Click Here</a></p>
+        <p class="b">Get discount on Potions!! <a href="Home.html">Click Here</a>
+        </p><br>
+        <div id="pics">
+            <p><img src="off.avif" id="picOne"></p> <br>
+            <p><img src="SALE.jpg" width="500PX" height="400px" id="picTwo"></p><br>
+            <p><img src="salee.jpeg" id="picThree"></p>
+        </div>
+        
+    </body>
+</html>
